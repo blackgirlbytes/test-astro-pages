@@ -1,8 +1,8 @@
-# Sample workflow for building and deploying a Gatsby site to GitHub Pages
+# Sample workflow for building and deploying a Astro site to GitHub Pages
 #
-# To get started with Gatsby see: https://www.gatsbyjs.com/docs/quick-start/
+# To get started with Astro see: https://www.gatsbyjs.com/docs/quick-start/
 #
-name: Deploy Gatsby site to Pages
+name: Deploy Astro site to Pages
 
 on:
   # Runs on pushes targeting the default branch
@@ -69,9 +69,9 @@ jobs:
           path: |
             public
             .cache
-          key: ${{ runner.os }}-gatsby-build-${{ hashFiles('public') }}
+          key: ${{ runner.os }}-astro-build-${{ hashFiles('public') }}
           restore-keys: |
-            ${{ runner.os }}-gatsby-build-
+            ${{ runner.os }}-astro-build-
       - name: Install dependencies
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
       - name: Build with Astro
